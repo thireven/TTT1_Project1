@@ -1,0 +1,34 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #F2F2F2;
+  font-family: Arial;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background: #B8D0D9;
+}
+
+h1 {
+  text-align: center;
+  color: #D97789;
+}
+
+#student-grade-table {
+  width: 80%;
+  border: 1px solid black;
+  background: #B8D0D9;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
