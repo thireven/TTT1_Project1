@@ -25,10 +25,39 @@ h1 {
   background: #B8D0D9;
   border-spacing: 0;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
 table th {
   border: 1px solid black;
   margin: 0;
   padding: 0;
+}
+
+body.dark {
+  background: black;
+}
+
+.dark nav {
+  background: rgb(80, 80, 80);
+  color: white;
+}
+
+.dark #student-grade-table {
+  background: rgb(105, 105, 105);
+  color: white;
+}
+
+#mode-toggle-btn {
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+  background: grey;
+  border: 4px dotted black;
+  border-radius: 15px;
+}
+
+.dark #mode-toggle-btn {
+  color: white;
+  border-color: white;
 }

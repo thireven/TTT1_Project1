@@ -2,42 +2,33 @@
   <head>
     <title>Student Grade Table</title>
     <link href="style.css" rel="stylesheet" />
+
   </head>
   <body>
     <nav>
-        <button>Dark Mode</button>
+        <button id="mode-toggle-btn">Dark Mode</button>
     </nav>
-    <h1>Student Grade Hiking Table</h1>
+
+    <h1>Student Grade Table</h1>
     <table id="student-grade-table">
       <thead>
         <tr>
           <th>Name</th>
           <th>Grade</th>
-      </tr>
+          <th>Options></th>
+        </tr>
       </thead>
+      <tbody>
 
-      <tr>
-        <td>A A</td>
-        <td>55</td>
-      </tr>
-      <tr>
-        <td>B B</td>
-        <td>55</td>
-      </tr>
-      <tr>
-        <td>C C</td>
-        <td>55</td>
-      </tr>
-      <tr>
-        <td>D D</td>
-        <td>55</td>
-      </tr>
-      <tr>
-        <td>E E</td>
-        <td>55</td>
-      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><input type="text" name="name" placeholder="Student Name" /></td>
+          <td><input type="number" min="0" max="100" name="grade" placeholder="Student Grade" /></td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
-
-    <h2>Blah blah blah</h2>
+    <script src="main.js"></script>
   </body>
 </html>
