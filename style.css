@@ -34,6 +34,20 @@ table th {
   padding: 0;
 }
 
+table tbody td {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.grade-col {
+  width: 120px;
+  text-align: right;
+}
+
+.options-col {
+  width: 100px;
+}
+
 .btn {
   padding: 10px;
   font-weight: bold;
@@ -83,4 +97,45 @@ body.dark {
 
 #add-btn:active {
   background: hsl(80, 50%, 55%);
+}
+
+.options-container {
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  background: rgb(194, 194, 194);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.options-list {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: grey;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+}
+
+.options-list li {
+  padding: 5px;
+}
+
+.options-list li:hover {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+.options-container:hover {
+  z-index: 99;
+}
+
+.options-container:hover .options-list {
+  display: block;
 }

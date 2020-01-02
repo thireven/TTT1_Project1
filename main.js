@@ -95,6 +95,13 @@ newStudentAddBtn.addEventListener('click', function(event) {
  * ===================================================================
  */
 
+const optionsTemplate = `<div class="options-container">
+<strong>MENU</strong>
+<ul class="options-list">
+<li>Edit</li>
+<li>Delete</li>
+</ul></div>`;
+
 function renderStudentTable() {
   studentTableBody.innerHTML = '';
 
@@ -106,7 +113,11 @@ function renderStudentTable() {
     const optionsCol = document.createElement('td');
 
     nameCol.textContent = student.name;
+    nameCol.className = 'name-col';
     gradeCol.textContent = student.grade;
+    gradeCol.className = 'grade-col';
+    optionsCol.className = 'options-col';
+    optionsCol.innerHTML = optionsTemplate;
 
     row.appendChild(nameCol);
     row.appendChild(gradeCol);
