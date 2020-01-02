@@ -89,7 +89,7 @@ newStudentAddBtn.addEventListener('click', function(event) {
   renderStudentTable();
 });
 
-// Delete
+// Event delegation on the tbody element. The block below looks for elements with the specified class to act on
 studentTableBody.addEventListener('click', function(event) {
   if (event.srcElement.classList.contains('delete-btn')) {
     // delete
