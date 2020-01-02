@@ -89,6 +89,16 @@ newStudentAddBtn.addEventListener('click', function(event) {
   renderStudentTable();
 });
 
+// Delete
+studentTableBody.addEventListener('click', function(event) {
+  if (event.srcElement.classList.contains('delete-btn')) {
+    // delete
+    studentTableBody.removeChild(event.srcElement.parentNode.parentNode.parentNode.parentNode);
+  } else if (event.srcElement.classList.contains('edit-btn')) {
+    // edit
+  }
+});
+
 /**
  * ===================================================================
  * END EVENT LISTENERS
@@ -98,8 +108,8 @@ newStudentAddBtn.addEventListener('click', function(event) {
 const optionsTemplate = `<div class="options-container">
 <strong>MENU</strong>
 <ul class="options-list">
-<li>Edit</li>
-<li>Delete</li>
+<li class="edit-btn">Edit</li>
+<li class="delete-btn">Delete</li>
 </ul></div>`;
 
 function renderStudentTable() {
