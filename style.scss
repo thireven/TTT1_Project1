@@ -31,6 +31,20 @@ h1 {
     border: 1px solid black;
     margin: 0;
     padding: 10px;
+    background: hsl(200, 3%, 37%);
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background: hsl(200, 3%, 57%);
+      color: black;
+    }
+
+    .dir-icon {
+      padding: 0 4px;
+      font-size: 18px;
+      color: blue;
+    }
   }
 
   tbody {
@@ -50,14 +64,12 @@ h1 {
     width: 120px;
     text-align: right;
   }
-  
+
   .options-col {
     width: 100px;
     text-align: center;
   }
 }
-
-
 
 .btn {
   padding: 10px;

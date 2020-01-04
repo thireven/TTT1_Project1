@@ -32,6 +32,20 @@ h1 {
   border: 1px solid black;
   margin: 0;
   padding: 10px;
+  background: #5c5f61;
+  color: white;
+  cursor: pointer;
+}
+
+#student-grade-table th:hover {
+  background: #8e9295;
+  color: black;
+}
+
+#student-grade-table th .dir-icon {
+  padding: 0 4px;
+  font-size: 18px;
+  color: blue;
 }
 
 #student-grade-table tbody td {
