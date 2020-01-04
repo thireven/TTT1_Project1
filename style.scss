@@ -1,0 +1,154 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #F2F2F2;
+  font-family: Arial;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background: #B8D0D9;
+}
+
+h1 {
+  text-align: center;
+  color: #D97789;
+}
+
+#student-grade-table {
+  width: 50%;
+  border: 1px solid black;
+  background: #B8D0D9;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  th {
+    border: 1px solid black;
+    margin: 0;
+    padding: 10px;
+  }
+
+  tbody {
+    td {
+      padding: 5px;
+      border: 1px solid black;
+    }
+
+    tr:hover {
+      background: rgb(160, 160, 255);
+      font-weight: bold;
+      color: rgb(68, 7, 60)
+    }
+  }
+
+  .grade-col {
+    width: 120px;
+    text-align: right;
+  }
+  
+  .options-col {
+    width: 100px;
+    text-align: center;
+  }
+}
+
+
+
+.btn {
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.form-control {
+  width: 120px;
+}
+
+#mode-toggle-btn {
+  color: black;
+  background: grey;
+}
+
+body.dark {
+  background: black;
+}
+
+.dark {
+  nav {
+    background: rgb(80, 80, 80);
+    color: white;
+  }
+
+  #student-grade-table {
+    background: rgb(105, 105, 105);
+    color: white;
+  }
+
+  #mode-toggle-btn {
+    color: white;
+    border-color: white;
+  }
+}
+
+#add-btn {
+  background: hsl(120, 100%, 25%);
+  border-color: rgb(75, 185, 75);
+  color: rgb(133, 214, 133);
+
+  &:hover {
+    background: hsl(120, 50%, 55%);
+  }
+
+  &:active {
+    background: hsl(80, 50%, 55%);
+  }
+}
+
+.options-container {
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  background: rgb(194, 194, 194);
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    z-index: 99;
+
+    .options-list {
+      display: block;
+    }
+  }
+
+  .options-list {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: grey;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 11;
+
+    li {
+      padding: 5px;
+
+      &:hover {
+        background: white;
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+  }
+}

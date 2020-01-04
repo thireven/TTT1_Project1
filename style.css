@@ -20,7 +20,7 @@ h1 {
 }
 
 #student-grade-table {
-  width: 80%;
+  width: 50%;
   border: 1px solid black;
   background: #B8D0D9;
   border-spacing: 0;
@@ -28,24 +28,31 @@ h1 {
   margin: 0 auto;
 }
 
-table th {
+#student-grade-table th {
   border: 1px solid black;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
-table tbody td {
+#student-grade-table tbody td {
   padding: 5px;
   border: 1px solid black;
 }
 
-.grade-col {
+#student-grade-table tbody tr:hover {
+  background: #a0a0ff;
+  font-weight: bold;
+  color: #44073c;
+}
+
+#student-grade-table .grade-col {
   width: 120px;
   text-align: right;
 }
 
-.options-col {
+#student-grade-table .options-col {
   width: 100px;
+  text-align: center;
 }
 
 .btn {
@@ -58,7 +65,11 @@ table tbody td {
 
 .form-control {
   width: 120px;
+}
 
+#mode-toggle-btn {
+  color: black;
+  background: grey;
 }
 
 body.dark {
@@ -66,18 +77,13 @@ body.dark {
 }
 
 .dark nav {
-  background: rgb(80, 80, 80);
+  background: #505050;
   color: white;
 }
 
 .dark #student-grade-table {
-  background: rgb(105, 105, 105);
+  background: dimgray;
   color: white;
-}
-
-#mode-toggle-btn {
-  color: black;
-  background: grey;
 }
 
 .dark #mode-toggle-btn {
@@ -86,17 +92,17 @@ body.dark {
 }
 
 #add-btn {
-  background: hsl(120, 100%, 25%);
-  border-color: rgb(75, 185, 75);
-  color: rgb(133, 214, 133);
+  background: green;
+  border-color: #4bb94b;
+  color: #85d685;
 }
 
 #add-btn:hover {
-  background: hsl(120, 50%, 55%);
+  background: #53c653;
 }
 
 #add-btn:active {
-  background: hsl(80, 50%, 55%);
+  background: #9fc653;
 }
 
 .options-container {
@@ -105,12 +111,20 @@ body.dark {
   border: 1px solid black;
   color: black;
   padding: 5px;
-  background: rgb(194, 194, 194);
+  background: #c2c2c2;
   cursor: pointer;
   z-index: 10;
 }
 
-.options-list {
+.options-container:hover {
+  z-index: 99;
+}
+
+.options-container:hover .options-list {
+  display: block;
+}
+
+.options-container .options-list {
   display: none;
   position: absolute;
   top: 20px;
@@ -122,20 +136,13 @@ body.dark {
   z-index: 11;
 }
 
-.options-list li {
+.options-container .options-list li {
   padding: 5px;
 }
 
-.options-list li:hover {
+.options-container .options-list li:hover {
   background: white;
   color: black;
   font-weight: bold;
 }
-
-.options-container:hover {
-  z-index: 99;
-}
-
-.options-container:hover .options-list {
-  display: block;
-}
+/*# sourceMappingURL=style.css.map */
