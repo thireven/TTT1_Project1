@@ -74,6 +74,26 @@ $(function() {
    * EVENT LISTENERS
    * ===================================================================
    */
+  $('#add-dummy-data-btn').on('click', function(event) {
+    $.ajax({
+      url: `https://randomuser.me/api/?results=20`,
+      complete: function(response) {
+        const data = response.responseJSON.results;
+        const newStudents = data.map(user => {
+          return {
+            id: Date.now(),
+            name: `${user.name.first} ${user.name.last}`,
+            grade: Number(user.dob.age),
+          }
+        });
+
+        students = students.concat(newStudents);
+        updateStudentStorage();
+        renderStudentTable();
+      }
+    })
+  });
+
   editForm.on('submit', function(event) {
     // Stop the usual submission process
     event.preventDefault();
